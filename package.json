@@ -18,10 +18,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^2.2.0",
     "debug": "^2.1.3",
     "metalsmith": "^1.5.0",
-    "metalsmith-collections": "^0.7.0",
-    "metalsmith-scoping": "^1.0.0"
+    "metalsmith-collections": "^0.7.0"
   }
 }
