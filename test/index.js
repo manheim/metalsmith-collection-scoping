@@ -77,7 +77,7 @@ describe('metalsmith-collection-scoping', function() {
           metadata: { private: true }
         }
       }))
-      .use(collectionScoping({privatizeFiles: true}))
+      .use(collectionScoping({propagate: true}))
       .build(function(err, files) {
       	assert.equal(files['three.md'].private, true);
       	assert.equal(files['four.md'].private, true);
