@@ -4,8 +4,8 @@ A [Metalsmith](https://github.com/segmentio/metalsmith) plugin that lets you app
 
 ## Features
 
-	- Mark [collections](https://github.com/segmentio/metalsmith-collections) as private and specify at build time whether to include them
-	- Propagate private collections down to matching files, for use in [metalsmith-scoping](https://github.com/lotaris/metalsmith-scoping)
+  - Mark [collections](https://github.com/segmentio/metalsmith-collections) as private and specify at build time whether to include them
+  - Propagate private collections down to matching files, for use in [metalsmith-scoping](https://github.com/lotaris/metalsmith-scoping)
 
 ## Installation
 
@@ -66,8 +66,8 @@ This will set the "private" metadata on each of the files in the "secrets" colle
 
 ## Options
 
-	- `scope` is the same as the same option in metalsmith-scoping.  When set to `private` it will include private collections, otherwise discard them.  Default is to discard private collections.
-	- `propagate` determines whether to propagate private collection scopes to matching files.  Default is `false`.  This option can be used independently of the `scope` option.
+  - `scope` is the same as the same option in metalsmith-scoping.  When set to `private` it will include private collections, otherwise discard them.  Default is to discard private collections.
+  - `propagate` determines whether to propagate private collection scopes to matching files.  Default is `false`.  This option can be used independently of the `scope` option.
 
 See the tests for more examples.
 
