@@ -24,7 +24,7 @@ This plugin is meant to be used with two existing plugins: metalsmith-collection
         		"reverse": true
         	},
         	"secrets": {
-        		metadata: {
+        		"metadata": {
         			"private": true
         		}
         	}
@@ -36,7 +36,9 @@ This plugin is meant to be used with two existing plugins: metalsmith-collection
 }
 
 ```
-will remove the "secrets" collection from the metalsmith metadata.  If you also want the files in the "secrets" collection to be private, you can add the "propagate" option and include metalsmith-scoping:
+will remove the "secrets" collection from the metalsmith metadata.  
+
+If you also want the files in the "secrets" collection to be private, you can add the "propagate" option and include metalsmith-scoping:
 
 ```json
 {
@@ -47,14 +49,14 @@ will remove the "secrets" collection from the metalsmith metadata.  If you also 
         		"reverse": true
         	},
         	"secrets": {
-        		metadata: {
+        		"metadata": {
         			"private": true
         		}
         	}
       	},
       	"metalsmith-collection-scoping": {
       		"scope": "public",
-      		"propagate" true
+      		"propagate": true
       	},
       	"metalsmith-scoping": {
       		"scope": "public"
@@ -62,7 +64,7 @@ will remove the "secrets" collection from the metalsmith metadata.  If you also 
 	}
 }
 ```
-This will set the "private" metadata on each of the files in the "secrets" collection.  Then metalsmith-scoping will pick this up and hide them.
+which will set the "private" property on each of the files in the "secrets" collection.  Then metalsmith-scoping will detect this and hide those files.
 
 ## Options
 
