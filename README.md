@@ -1,5 +1,8 @@
 # metalsmith-collection-scoping
 
+[![Build Status](https://travis-ci.org/manheim/metalsmith-collection-scoping.svg?branch=master)](https://travis-ci.org/manheim/metalsmith-collection-scoping)
+[![Dependency Status](https://www.versioneye.com/user/projects/55365aec7f43bc3f44000089/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55365aec7f43bc3f44000089)
+
 A [Metalsmith](https://github.com/segmentio/metalsmith) plugin that lets you apply scoping to collections.
 
 ## Features
