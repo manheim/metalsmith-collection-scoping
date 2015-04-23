@@ -2,6 +2,14 @@
   "name": "metalsmith-collection-scoping",
   "version": "0.0.1",
   "description": "A Metalsmith plugin to apply scoping to collections",
+  "keywords": [
+    "metalsmith"
+  ],
+  "author": "Manheim <opensource@manheim.com>",
+  "contributors": [{
+    "name": "Paul O'Fallon",
+    "email": "paul@ofallonfamily.com"
+  }],
   "readmeFilename": "README.md",
   "homepage": "https://github.com/manheim/metalsmith-collection-scoping",
   "repository": {
