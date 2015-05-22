@@ -86,4 +86,58 @@ describe('metalsmith-collection-scoping', function() {
             done();
         });
     });
+
+    it("should remove private files from collections for non-private scope", function(done) {
+        var metalsmith = Metalsmith('test/fixtures/basic');
+        metalsmith
+        .use(collections({
+            articles: {}
+        }))
+        .use(collectionScoping())
+        .build(function(err) {
+            var m = metalsmith.metadata();
+            m.collections.articles.forEach(function(page) {
+                assert.equal(page["private"],null);
+            });
+            m.articles.forEach(function(page) {
+                assert.equal(page["private"],null);
+            });
+            assert.equal(m.collections.articles.length,1);
+            assert.equal(m.articles.length,1);
+            done();
+        });
+    });
+
+    it("should leave private files in collections for private scope", function(done) {
+        var metalsmith = Metalsmith('test/fixtures/basic');
+        metalsmith
+        .use(collections({
+            articles: {}
+        }))
+        .use(collectionScoping({scope: 'private'}))
+        .build(function(err) {
+            var m = metalsmith.metadata();
+            assert.equal(m.collections.articles.length, 2);
+            assert.equal(m.articles.length,2);
+            done();
+        });
+    });
+
+    it("should not remove metadata when removing private files from collections", function(done) {
+        var metalsmith = Metalsmith('test/fixtures/basic');
+        metalsmith
+        .use(collections({
+            articles: {
+                metadata: { foo: 'bar' }
+            }
+        }))
+        .use(collectionScoping({scope: 'private'}))
+        .build(function(err) {
+            var m = metalsmith.metadata();
+            assert.equal(m.collections.articles.metadata.foo, 'bar');
+            assert.equal(m.articles.metadata.foo, 'bar');
+            done();
+        });
+    });
+
 });
