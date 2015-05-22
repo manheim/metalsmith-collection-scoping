@@ -9,6 +9,7 @@ A [Metalsmith](https://github.com/segmentio/metalsmith) plugin that lets you app
 ## Features
 
   - Mark [collections](https://github.com/segmentio/metalsmith-collections) as private and specify at build time whether to include them
+  - Remove private files from their collections when running in a non-private scope
   - Propagate private collections down to matching files, for use in [metalsmith-scoping](https://github.com/lotaris/metalsmith-scoping)
 
 ## Installation
